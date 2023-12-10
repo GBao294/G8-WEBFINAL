@@ -1,0 +1,212 @@
+#header-bar {
+    position:absolute;
+    display: inline-block;
+    height: 10.10vh; width: 100%;
+    z-index: 5;
+    background-color: linear-gradient(#012437,#052a3d);
+}
+
+#header-bar .header-btn{
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #011a27;
+    width: 34px; height: 34px;
+    border: none;
+}
+.header-btn .nav-btn{
+    color: #cfd8cb;
+    line-height: 34px;
+    font-size: 20px;
+    padding: 0 8px;
+    z-index: 10;
+}
+
+#header-bar .left-btn{
+    margin:2.401vh 0.52vw 3.955vh 1.229vw; 
+}
+
+#header-bar .right-btn{
+    margin:2.401vh 0.28vw 3.955vh 0;
+}
+
+
+#header-bar .avatar-btn{
+    display: block;
+    position: relative;
+    margin:2.401vh 1.563vw 3.955vh 0.28vw;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.header-btn .avatar-img{
+    background: url(https://i.pinimg.com/236x/7c/67/d2/7c67d210a731c81342f00ba1e3186a03.jpg) no-repeat center /cover;
+    width: 75%; height: 75%;
+    border-radius: 50%;
+}
+
+
+#avatar-subnav{
+    display: none;
+    position: absolute;
+    background-color: #282828;
+    top:6vh; right: 0.5vw;
+    border-radius: 5px;
+    height: 34vh;
+}
+#avatar-subnav li{
+    list-style-type: none;
+    width: 12vw; height: 6.5vh;
+    line-height: 7vh;
+}
+#avatar-subnav li a{
+    position: absolute;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding-left: 1vw;
+    left: 0;
+    font-family: 'Calibri';
+    font-size: 18px;
+}
+
+
+#header-bar .bell-btn{
+    position: relative;
+    margin:2.401vh 0.28vw 3.955vh 0.28vw; 
+    float: right;
+}
+
+
+#header-bar .about-btn{
+    position: relative;
+    width: 8.126vw; height: 4.802vh;
+    background-color: #011a27; 
+    border-radius: 40px;
+    float: right;
+    margin: 2.401vh 0.28vw 3.955vh 0.28vw;
+    border: none;
+}
+ .about-btn .about-text{
+    line-height: 4.802vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14.5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#header-bar .premium-btn{
+    border: none;
+    display: block;
+    position: relative;
+    width: 9.226vw; height: 4.802vh;
+    background-color: #fff;
+    border-radius: 40px;
+    float: right;
+    margin: 2.401vh 0.28vw 3.955vh 0.28vw;
+}
+.premium-btn .premium-text{
+    line-height: 4.802vh;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14.5px;
+    color: #000;
+    text-decoration: none;
+}
+
+
+.left-btn:hover,
+.right-btn:hover{
+    cursor:not-allowed;
+}
+
+.bell-btn:hover,
+.about-btn:hover{
+    top:-1%; right:0.2%;
+    cursor: pointer;
+}
+
+#avatar-subnav li:hover{
+    display: block;
+    text-decoration: none;
+    background-color: #3e3e3e;
+}
+#avatar-btn:hover .avatar-subnav{
+    display: block;
+}
+
+.about-btn:active{
+    top: 0; right: 0;
+    cursor: pointer;
+}
+
+.premium-btn:hover{
+    top:-1%; right:0.2%;
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+.premium-btn:active{
+    top: 0; right: 0;
+    cursor: pointer;
+    background-color: #b7b7b7;
+}
+
+
+@media screen and (max-width: 768px) {
+    #header-bar {
+        flex-direction: row; 
+        height: auto; 
+        flex-wrap: wrap; 
+    }
+
+    .header-btn {
+        margin: 5px;
+    }
+
+ 
+    .about-btn .about-text,
+    .premium-btn .premium-text {
+        font-size: 12px; 
+    }
+
+    #header-bar .avatar-btn {
+        margin-right: 5px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0; 
+    }
+
+   
+    #header-bar .header-btn,
+    #header-bar .about-btn,
+    #header-bar .premium-btn {
+        width: 11%; 
+        margin: 5px; 
+        
+    }
+
+   
+    .about-btn .about-text,
+    .premium-btn .premium-text {
+        text-align: center; 
+        font-size: 8px; 
+    }
+
+  
+    #avatar-btn:active + #avatar-subnav,
+    #avatar-btn:focus + #avatar-subnav {
+        display: block; 
+        width: 100%; 
+    }
+
+    #header-bar .avatar-btn {
+        margin-right: 65px; 
+    }
+}
