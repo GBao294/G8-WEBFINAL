@@ -9,6 +9,7 @@ import SignIn from './Components/Login';
 import { MainContainer } from "./Components/MainContainer";
 import { MusicProvider } from './Components/MusicContext';
 import MusicPlayer from './Components/MusicPlayer';
+import Profile from './Components/Profile';
 import { Register } from './Components/Register';
 import { MyPlaylist } from './PlayList/MyPlaylist';
 import { MyPlaylist2 } from './PlayList/MyPlaylist2';
@@ -40,11 +41,12 @@ function App() {
     <div className="">
       {showText && <Navigation />}
 
-      <div className="background"></div>
+   
 
       <Routes>
         <Route path="/" element={
           <>
+             <div className="background"></div>
             <SignIn />
           </>
         } />
@@ -55,11 +57,13 @@ function App() {
         } /> */}
         <Route path="/Register" element={
           <>
+             <div className="background"></div>
             <Register/>
           </>
         } />
         <Route path="/Bay" element={
           <>
+             <div className="background"></div>
           <div className="App">
           <MusicProvider>
             <LeftMenu />
@@ -74,6 +78,13 @@ function App() {
           <>
               <HeaderBarAboutUs style={BGColor} />
               <AboutUs />
+          
+          </>
+        } />
+         <Route path="/Profile" element={
+          <>
+              <div className="background-profile"></div>
+              <Profile />
           
           </>
         } />

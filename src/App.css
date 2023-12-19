@@ -6,4 +6,14 @@
   display: flex;
   background-color: black;
 }
-
+.background-profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: bisque;
+  background-size: cover;
+  filter: grayscale(50);
+  z-index: -1;
+} 

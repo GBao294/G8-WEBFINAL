@@ -35,7 +35,7 @@ function HeaderBar({ style }) {
       <button onClick={clickAvatar} className="header-btn avatar-btn">
         <div className="avatar-img"></div>
         <ul id="avatar-subnav">
-          <li><a href="">Tài khoản</a></li>
+          <li><a href="/Profile">Tài khoản</a></li>
           <li><a href="">Hồ sơ</a></li>
           <li><a href="">Nâng cấp tài khoản</a></li>
           <li><a href="">Cài đặt</a></li>
@@ -64,3 +64,4 @@ function HeaderBar({ style }) {
 }
 
 export { HeaderBar };
+
