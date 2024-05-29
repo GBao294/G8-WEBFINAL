@@ -9,7 +9,6 @@ import SignIn from './Components/Login';
 import { MainContainer } from "./Components/MainContainer";
 import { MusicProvider } from './Components/MusicContext';
 import MusicPlayer from './Components/MusicPlayer';
-import Profile from './Components/Profile';
 import { Register } from './Components/Register';
 import { MyPlaylist } from './PlayList/MyPlaylist';
 import { MyPlaylist2 } from './PlayList/MyPlaylist2';
@@ -50,17 +49,14 @@ function App() {
             <SignIn />
           </>
         } />
-       {/* <Route path="/Profile" element={
-          <>
-            <Profile />
-          </>
-        } /> */}
+
         <Route path="/Register" element={
           <>
              <div className="background"></div>
             <Register/>
           </>
         } />
+
         <Route path="/Bay" element={
           <>
              <div className="background"></div>
@@ -74,17 +70,11 @@ function App() {
          
           </>
         } />
+        
          <Route path="/AboutUs" element={
           <>
               <HeaderBarAboutUs style={BGColor} />
               <AboutUs />
-          
-          </>
-        } />
-         <Route path="/Profile" element={
-          <>
-              <div className="background-profile"></div>
-              <Profile />
           
           </>
         } />

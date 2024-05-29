@@ -31,11 +31,9 @@ onValue(getMusicData, (snapshot) =>{
   })
 })
 
-const BGColor = "linear-gradient(#2b410d,#11150c)";
-    
     return (
         <div className="playListContainer">
-            <HeaderBar style={BGColor} />
+            <HeaderBar/>
             <div style={{backgroundImage: 'linear-gradient(#2a400c,#121809)'}} className="headerContent">
                <img src="https://i.pinimg.com/236x/97/fc/7f/97fc7fd0c16d71ecf115129083d9c67d.jpg" className="headerImage"></img>
                <p className="PL">Playlist</p>

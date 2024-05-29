@@ -33,7 +33,7 @@ const SignIn = () => {
                         <div className="button-box">
                             <div className="form-value">
                                 <form action="" onSubmit={signIn}>
-                                    <h2>Login</h2>
+                                    <h2 className='Register-head'>Login</h2>
                                     <div className="inputbox">
                                         <ion-icon name="mail-outline"></ion-icon>
                                         <input type="email" required
