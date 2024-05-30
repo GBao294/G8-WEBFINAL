@@ -1,9 +1,11 @@
 import { faArrowLeft, faArrowRight, faBell } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/HeaderBar.css";
 import { Money } from './MoneyDonate';
+import { UserContext } from './UserContext';
+import { useNavigate } from 'react-router-dom';
 
 function HeaderBar({ style }) {
   const clickAvatar = () => {
@@ -16,6 +18,13 @@ function HeaderBar({ style }) {
 
   const handleButtonClick = () => {
     setReloadMoney(!reloadMoney);
+  };
+
+  const navigate = useNavigate();
+  const { logout } = useContext(UserContext);
+  const handleLogout = () => {
+    logout();
+    navigate('/');
   };
 
   useEffect(() => {
@@ -39,7 +48,7 @@ function HeaderBar({ style }) {
           <li><a href="">Hồ sơ</a></li>
           <li><a href="">Nâng cấp tài khoản</a></li>
           <li><a href="">Cài đặt</a></li>
-          <li style={{ borderTop: '1px solid #383838' }}><a href="">Đăng xuất</a></li>
+          <li style={{ borderTop: '1px solid #383838' }}><a onClick={handleLogout} href="">Đăng xuất</a></li>
         </ul>
       </button>
 

@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import { push, ref } from 'firebase/database';
 import { database, db, auth } from '../firebase-config';
+import { UserContext } from './UserContext';
 
 const SignIn = () => {
     const [email, setEmail] = useState("");
@@ -11,12 +12,12 @@ const SignIn = () => {
     const navigate = useNavigate();
     const [error, setError] = useState("");
     const LogDatabase = ref(database, 'LogHistory/Log');
+    const { setUser } = useContext(UserContext);
 
     const signIn = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            navigate('/Bay');
             //Lưu hành động vào log
             const userId = userCredential.user.uid;
             const currentTime = new Date();
@@ -24,10 +25,16 @@ const SignIn = () => {
             const newAction = {
              time: formattedTime,
              action: `Tài khoản "${email}" đăng nhập`,
-             user: "",
+             user: userId,
             };
             push(LogDatabase, newAction);
+
+            const userInfo = { uid: userId };
+            localStorage.setItem('user', JSON.stringify(userInfo));
+            setUser(userInfo); // Update user status in UserContext
+            navigate('/Bay');
           })
+
           .catch((error) => {
             console.log(error);
             setError(error.message);

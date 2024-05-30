@@ -19,6 +19,7 @@ import { Content } from './Admin/Content';
 import { Log } from './Admin/Log';
 import { Upload } from './Admin/Upload';
 import { ResetPW } from './Components/ResetPW';
+import ProtectedRoute from './Components/ProtectedRoute';
 function Navigation() {
   return (
     <div>
@@ -64,15 +65,15 @@ function App() {
 
         <Route path="/Bay" element={
           <>
-          <div className="background"></div>
+          {/* <div className="background"></div> */}
           <div className="App">
-          
-          <MusicProvider>
-            <LeftMenu />
-            <MainContainer />
-            <MusicPlayer/>
-          </MusicProvider>
-          
+          <ProtectedRoute>
+            <MusicProvider>
+              <LeftMenu />
+              <MainContainer />
+              <MusicPlayer/>
+            </MusicProvider>
+          </ProtectedRoute>
           </div>
          
           </>
@@ -80,23 +81,23 @@ function App() {
         
          <Route path="/AboutUs" element={
           <>
-          
+          <ProtectedRoute>
               <HeaderBarAboutUs style={BGColor} />
               <AboutUs />
-          
+          </ProtectedRoute>
           </>
         } />
         
         <Route path="/UsUkMusic" element={
           <>
           <div className="App">
-          
-          <MusicProvider>
-            <LeftMenu />
-            <US_UK />
-            <MusicPlayer/>
-          </MusicProvider>
-          
+          <ProtectedRoute>
+            <MusicProvider>
+              <LeftMenu />
+              <US_UK />
+              <MusicPlayer/>
+            </MusicProvider>
+          </ProtectedRoute>
           </div>
           </>
         } />
@@ -104,13 +105,13 @@ function App() {
         <Route path="/Vpop" element={
           <>
           <div className="App">
-          
-          <MusicProvider>
-            <LeftMenu />
-            <Vpop/>
-            <MusicPlayer/>
-          </MusicProvider>
-          
+          <ProtectedRoute>
+            <MusicProvider>
+              <LeftMenu />
+              <Vpop/>
+              <MusicPlayer/>
+            </MusicProvider>
+          </ProtectedRoute>
           </div>
           </>
         } />
@@ -118,13 +119,13 @@ function App() {
         <Route path="/myPlaylist" element={
           <>
           <div className="App">
-          
-          <MusicProvider>
-            <LeftMenu />
-            <MyPlaylist />
-            <MusicPlayer/>
-          </MusicProvider>
-          
+          <ProtectedRoute>
+            <MusicProvider>
+              <LeftMenu />
+              <MyPlaylist />
+              <MusicPlayer/>
+            </MusicProvider>
+          </ProtectedRoute>
           </div>
           </>
         } />
@@ -132,56 +133,29 @@ function App() {
         <Route path="/Playlist2" element={
           <>
           <div className="App">
-          
-          <MusicProvider>
-            <LeftMenu />
-            <MyPlaylist2 />
-            <MusicPlayer/>
-          </MusicProvider>
-          
+          <ProtectedRoute>
+            <MusicProvider>
+              <LeftMenu />
+              <MyPlaylist2 />
+              <MusicPlayer/>
+            </MusicProvider>
+          </ProtectedRoute>
           </div>
           </>
         } />
         <Route path="/Favourite" element={
           <>
           <div className="App">
-          
-            <MusicProvider>
-              <LeftMenu />
-              <Favourite />
-              <MusicPlayer/>
-            </MusicProvider>
-            
+          <ProtectedRoute>
+              <MusicProvider>
+                <LeftMenu />
+                <Favourite />
+                <MusicPlayer/>
+              </MusicProvider>
+            </ProtectedRoute>
             </div>
           </> 
         } />
-
-        <Route path="/Admin" element={
-            <>
-            <div>
-            <TopMenu />
-            <Content />
-            </div>
-            </>
-        }/>
-
-        <Route path="/Admin/Upload" element={
-            <>
-            <div>
-            <TopMenu />
-            <Upload />
-            </div>
-            </>
-        }/>
-
-        <Route path="/Admin/Log" element={
-            <>
-            <div>
-            <TopMenu />
-            <Log />
-            </div>
-            </>
-        }/>
 
         <Route path="/ResetPassword" element={
             <>
