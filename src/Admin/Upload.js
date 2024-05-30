@@ -13,7 +13,7 @@ function Upload() {
   const [selectedSong, setSelectedSong] = useState(null);
   const LogDatabase = dbRef(database, 'LogHistory/Log');
   const auth = getAuth();
-  const {uid} = auth.currentUser;
+  const email = auth.currentUser.email;
 
   // Function to decode user.key into UID and role
   const decodeUserKey = (key) => {
@@ -62,7 +62,7 @@ function Upload() {
                 const newAction = {
                   time: formattedTime,
                   action: `Đăng tải 1 ảnh lên database.`,
-                  user: uid,
+                  user: email,
                 };
                 push(LogDatabase, newAction);
               })
@@ -89,7 +89,7 @@ function Upload() {
                 const newAction = {
                   time: formattedTime,
                   action: `Đăng tải 1 bài hát lên database.`,
-                  user: uid,
+                  user: email,
                 };
                 push(LogDatabase, newAction);
               })
