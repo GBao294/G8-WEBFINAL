@@ -14,7 +14,23 @@ const firebaseConfig = {
     measurementId: "G-HMJYR5JZPR"
   };
 
+
+  const adminConfig = {
+    apiKey: "AIzaSyCNqxr8wYRW1B0DE-xTozEvdTeTYjb7jzg",
+    authDomain: "adminbaomatweb.firebaseapp.com",
+    projectId: "adminbaomatweb",
+    storageBucket: "adminbaomatweb.appspot.com",
+    messagingSenderId: "382173757870",
+    appId: "1:382173757870:web:6076879faaf1b7d374483f"
+  };
+
   export const app = initializeApp(firebaseConfig)
   export const db = getFirestore(app);
   export const database = getDatabase(app);
   export const auth = getAuth(app);
+
+
+  export const adminApp = initializeApp(adminConfig, 'adminApp')
+  export const adminDb = getFirestore(adminApp);
+  export const adminDatabase = getDatabase(adminApp);
+  export const adminAuth = getAuth(adminApp);

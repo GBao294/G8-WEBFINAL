@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import "./App.css";
-import { AboutUs } from "./Components/AboutUs";
-import { Favourite } from './Components/Favourite';
-import { HeaderBarAboutUs } from './Components/HeaderBarAboutUs';
-import { LeftMenu } from "./Components/LeftMenu";
 import SignIn from './Components/Login';
-import { MainContainer } from "./Components/MainContainer";
-import { MusicProvider } from './Components/MusicContext';
-import MusicPlayer from './Components/MusicPlayer';
-import { Register } from './Components/Register';
-import { MyPlaylist } from './PlayList/MyPlaylist';
-import { MyPlaylist2 } from './PlayList/MyPlaylist2';
-import { US_UK } from './PlayList/US-UK';
-import { Vpop } from './PlayList/Vpop';
-import { TopMenu } from './Admin/TopMenu';
-import { Content } from './Admin/Content';
-import { Log } from './Admin/Log';
-import { Upload } from './Admin/Upload';
-import { ResetPW } from './Components/ResetPW';
+import { TopMenu } from './Components/TopMenu';
+import { Content } from './Components/Content';
+import { Log } from './Components/Log';
+import { Upload } from './Components/Upload';
 import ProtectedRoute from './Components/ProtectedRoute';
 function Navigation() {
   return (
@@ -56,110 +43,36 @@ function App() {
           </>
         } />
 
-        <Route path="/Register" element={
-          <>
-             <div className="background"></div>
-            <Register/>
-          </>
-        } />
-
-        <Route path="/Bay" element={
-          <>
-          {/* <div className="background"></div> */}
-          <div className="App">
-          <ProtectedRoute>
-            <MusicProvider>
-              <LeftMenu />
-              <MainContainer />
-              <MusicPlayer/>
-            </MusicProvider>
-          </ProtectedRoute>
-          </div>
-         
-          </>
-        } />
-        
-         <Route path="/AboutUs" element={
-          <>
-          <ProtectedRoute>
-              <HeaderBarAboutUs style={BGColor} />
-              <AboutUs />
-          </ProtectedRoute>
-          </>
-        } />
-        
-        <Route path="/UsUkMusic" element={
-          <>
-          <div className="App">
-          <ProtectedRoute>
-            <MusicProvider>
-              <LeftMenu />
-              <US_UK />
-              <MusicPlayer/>
-            </MusicProvider>
-          </ProtectedRoute>
-          </div>
-          </>
-        } />
-        
-        <Route path="/Vpop" element={
-          <>
-          <div className="App">
-          <ProtectedRoute>
-            <MusicProvider>
-              <LeftMenu />
-              <Vpop/>
-              <MusicPlayer/>
-            </MusicProvider>
-          </ProtectedRoute>
-          </div>
-          </>
-        } />
-
-        <Route path="/myPlaylist" element={
-          <>
-          <div className="App">
-          <ProtectedRoute>
-            <MusicProvider>
-              <LeftMenu />
-              <MyPlaylist />
-              <MusicPlayer/>
-            </MusicProvider>
-          </ProtectedRoute>
-          </div>
-          </>
-        } />
-
-        <Route path="/Playlist2" element={
-          <>
-          <div className="App">
-          <ProtectedRoute>
-            <MusicProvider>
-              <LeftMenu />
-              <MyPlaylist2 />
-              <MusicPlayer/>
-            </MusicProvider>
-          </ProtectedRoute>
-          </div>
-          </>
-        } />
-        <Route path="/Favourite" element={
-          <>
-          <div className="App">
-          <ProtectedRoute>
-              <MusicProvider>
-                <LeftMenu />
-                <Favourite />
-                <MusicPlayer/>
-              </MusicProvider>
+````````<Route path="/Admin" element={
+            <>
+            <div>
+            <ProtectedRoute>
+              <TopMenu />
+              <Content />
             </ProtectedRoute>
             </div>
-          </> 
-        } />
+            </>
+        }/>
 
-        <Route path="/ResetPassword" element={
+        <Route path="/Admin/Upload" element={
             <>
-            <ResetPW />
+            <div>
+            <ProtectedRoute>
+              <TopMenu />
+              <Upload />
+            </ProtectedRoute>
+            </div>
+            </>
+        }/>
+
+        <Route path="/Admin/Log" element={
+            <>
+            <div>
+            <ProtectedRoute>
+              <TopMenu />
+              <Log />
+            </ProtectedRoute>
+            </div>
             </>
         }/>
         
