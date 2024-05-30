@@ -1,0 +1,35 @@
+#infoTable {
+    border-collapse: collapse;
+    position: relative;
+    width: 95%;
+    top: 20px; left: 20px;
+    margin-bottom: 20px;
+}
+
+#infoTable th,
+#infoTable td {
+    border: 1px solid black;
+    padding: 8px;
+}  
+  
+#infoTable th {
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+}
+
+/*Content*/
+#infoTable .picture {
+    border-radius: 8px;
+    width: 125px; height: 125px;
+    margin-left: 20px;
+}
+#infoTable .rowContent {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Calibri';
+}
+
+.space {
+    height: 20px;
+}

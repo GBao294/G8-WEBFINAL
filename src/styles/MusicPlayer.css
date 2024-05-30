@@ -346,12 +346,15 @@
     padding-top: -40px;
     font-size: 8px;
   }
+
   .musicPlayer .songAttributes .right i {
     font-size: 12px;
     margin-left: 20px;
   }
+
   .musicPlayer .songAttributes .right .download {
     font-size: 13px;
     padding-left: 20px;
   }
+
 }

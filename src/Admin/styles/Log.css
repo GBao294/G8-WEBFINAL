@@ -1,0 +1,52 @@
+#infoTable {
+    border-collapse: collapse;
+    position: relative;
+    width: 95%;
+    top: 20px; left: 20px;
+    margin-bottom: 15px;
+}
+
+#infoTable th,
+#infoTable td {
+    border: 1px solid black;
+    padding: 8px;
+}  
+  
+#infoTable th {
+    font-weight: bold;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Calibri';
+}
+
+#infoTable .time {
+    width: 17%;
+}
+#infoTable .action {
+    width: 58%;
+    max-width: 58%;
+}
+#infoTable .user {
+    width: 25%;
+}
+
+/*Content*/
+#infoTable .timeRow {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Calibri';
+    color: red;
+}
+#infoTable .actionRow {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Calibri';
+}
+#infoTable .userRow {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: 'Calibri';
+    color:navy;
+}
+
+

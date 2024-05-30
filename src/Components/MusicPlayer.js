@@ -108,6 +108,25 @@ function MusicPlayer() {
     setCurrenttime(progressBar.current.value);
   };
 
+  //Download bài hát
+  const handleDownload = (song, id) => {
+    const link = document.createElement("a");
+    link.href = song;
+    link.download = "song.mp3";
+    link.target = "_blank";
+    link.click();
+
+    //Lưu hành động vào log
+    /*const currentTime = new Date();
+    const formattedTime = `${currentTime.toLocaleDateString()} ${currentTime.toLocaleTimeString()}`;
+    const newAction = {
+      time: formattedTime,
+      action: `Tải 1 ảnh về máy. ID của ảnh được tải: ${id}`,
+      user: uid,
+    };
+    push(LogDatabase, newAction);*/
+  };
+
   return (
     <div className="musicPlayer">
       <img  className="songImage" src={ImgSrc} alt="" />
@@ -158,7 +177,7 @@ function MusicPlayer() {
               <FaShareAlt />
             </i>
 
-            <i className="download">
+            <i className="download" onClick={() => handleDownload(song)}>
               <BsDownload />
             </i>
           </div>

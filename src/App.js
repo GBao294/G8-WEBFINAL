@@ -14,6 +14,10 @@ import { MyPlaylist } from './PlayList/MyPlaylist';
 import { MyPlaylist2 } from './PlayList/MyPlaylist2';
 import { US_UK } from './PlayList/US-UK';
 import { Vpop } from './PlayList/Vpop';
+import { TopMenu } from './Admin/TopMenu';
+import { Content } from './Admin/Content';
+import { Log } from './Admin/Log';
+import { Upload } from './Admin/Upload';
 function Navigation() {
   return (
     <div>
@@ -59,13 +63,15 @@ function App() {
 
         <Route path="/Bay" element={
           <>
-             <div className="background"></div>
+          <div className="background"></div>
           <div className="App">
+          
           <MusicProvider>
             <LeftMenu />
             <MainContainer />
             <MusicPlayer/>
           </MusicProvider>
+          
           </div>
          
           </>
@@ -73,6 +79,7 @@ function App() {
         
          <Route path="/AboutUs" element={
           <>
+          
               <HeaderBarAboutUs style={BGColor} />
               <AboutUs />
           
@@ -82,11 +89,13 @@ function App() {
         <Route path="/UsUkMusic" element={
           <>
           <div className="App">
+          
           <MusicProvider>
             <LeftMenu />
             <US_UK />
             <MusicPlayer/>
           </MusicProvider>
+          
           </div>
           </>
         } />
@@ -94,11 +103,13 @@ function App() {
         <Route path="/Vpop" element={
           <>
           <div className="App">
+          
           <MusicProvider>
             <LeftMenu />
             <Vpop/>
             <MusicPlayer/>
           </MusicProvider>
+          
           </div>
           </>
         } />
@@ -106,11 +117,13 @@ function App() {
         <Route path="/myPlaylist" element={
           <>
           <div className="App">
+          
           <MusicProvider>
             <LeftMenu />
             <MyPlaylist />
             <MusicPlayer/>
           </MusicProvider>
+          
           </div>
           </>
         } />
@@ -118,26 +131,58 @@ function App() {
         <Route path="/Playlist2" element={
           <>
           <div className="App">
+          
           <MusicProvider>
             <LeftMenu />
             <MyPlaylist2 />
             <MusicPlayer/>
           </MusicProvider>
+          
           </div>
           </>
         } />
         <Route path="/Favourite" element={
           <>
           <div className="App">
+          
             <MusicProvider>
               <LeftMenu />
               <Favourite />
               <MusicPlayer/>
             </MusicProvider>
+            
             </div>
           </> 
         } />
-      </Routes>
+
+        <Route path="/Admin" element={
+            <>
+            <div>
+            <TopMenu />
+            <Content />
+            </div>
+            </>
+        }/>
+
+        <Route path="/Admin/Upload" element={
+            <>
+            <div>
+            <TopMenu />
+            <Upload />
+            </div>
+            </>
+        }/>
+
+        <Route path="/Admin/Log" element={
+            <>
+            <div>
+            <TopMenu />
+            <Log />
+            </div>
+            </>
+        }/>
+        
+        </Routes>
     </div>
   );
 }

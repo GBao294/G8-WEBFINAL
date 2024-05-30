@@ -1,0 +1,22 @@
+.HeaderBar {
+    width: 100%;
+}
+.HeaderBar .Items {
+    width: 100%;
+    display: inline-block;
+    background-color: #222222;
+}
+.Items .Song {
+    padding-left: 20px;
+}
+.Items li {
+    float: left;
+    padding: 10px;
+    list-style-type: none;
+    color: #b3b1b1;
+    text-decoration: none
+}
+.Items li p {
+    color: #b3b1b1;
+    text-decoration: none !important;
+}

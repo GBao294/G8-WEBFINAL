@@ -1,21 +1,32 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import "../styles/register.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from "../firebase-config";
 import { useNavigate } from 'react-router-dom';
+import { push, ref } from 'firebase/database';
+import { database, db, auth } from '../firebase-config';
 
 const SignIn = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const [error, setError] = useState("");
+    const LogDatabase = ref(database, 'LogHistory/Log');
 
     const signIn = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-            console.log(userCredential);
             navigate('/Bay');
+            //Lưu hành động vào log
+            const userId = userCredential.user.uid;
+            const currentTime = new Date();
+            const formattedTime = `${currentTime.toLocaleDateString()} ${currentTime.toLocaleTimeString()}`;
+            const newAction = {
+             time: formattedTime,
+             action: `Tài khoản "${email}" đăng nhập`,
+             user: "",
+            };
+            push(LogDatabase, newAction);
           })
           .catch((error) => {
             console.log(error);

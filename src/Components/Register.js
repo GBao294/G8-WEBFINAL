@@ -32,7 +32,9 @@ const checkConfirm = (event) =>{
     else
     {   //Đưa thông tin đăng ký lên database
         createUserWithEmailAndPassword(auth, email, password)
+        if(notify === ""){
         navigate('/');
+        }
     }
 }
 
