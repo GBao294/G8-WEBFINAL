@@ -117,11 +117,26 @@ button{
 }
 .register p a{
     text-decoration: none;
-    color: blue;
+    color: #087cff;
     font-weight: 600;
 }
 .register p a:hover{
     text-decoration: underline;
+}
+
+.forgotPass {
+    font-size: 15px;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.forgotPass a {
+    text-decoration: none;
+    color: #6a11b7;
+}
+.forgotPass a:hover {
+    text-decoration: underline;
+    color: #1ed760;
+    
 }
 .background {
     position: absolute;

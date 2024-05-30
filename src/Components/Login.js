@@ -66,6 +66,7 @@ const SignIn = () => {
                                     <div className="register">
                                         <p>Or <a href="/Register">Register</a> if you do not have an account</p>
                                     </div>
+                                    <div className='forgotPass'> <a href='/ResetPassword'>Forgot password?</a></div>
                                 </form>
                                 {error && <div className="error-message">{error}</div>}
                             </div>

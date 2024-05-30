@@ -18,6 +18,7 @@ import { TopMenu } from './Admin/TopMenu';
 import { Content } from './Admin/Content';
 import { Log } from './Admin/Log';
 import { Upload } from './Admin/Upload';
+import { ResetPW } from './Components/ResetPW';
 function Navigation() {
   return (
     <div>
@@ -179,6 +180,12 @@ function App() {
             <TopMenu />
             <Log />
             </div>
+            </>
+        }/>
+
+        <Route path="/ResetPassword" element={
+            <>
+            <ResetPW />
             </>
         }/>
         
