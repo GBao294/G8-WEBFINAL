@@ -11,32 +11,36 @@
     justify-content: center;
     background-color: #f6f0ff;
   }
-  
+
+  .rowContainer{
+    background-color: #121212;
+  }
   .about-section {
-    background: url(https://png.pngtree.com/background/20210711/original/pngtree-white-minimalist-chinese-style-ink-landscape-background-picture-image_1146655.jpg) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
+    background: url(https://i.pinimg.com/236x/f1/72/bb/f172bb941e8f75a3cfc566e52e1cbea8.jpg) no-repeat left;
+    background-size: 22%;
+    background-color: #121212;
     overflow: hidden;
     padding: 100px 0;
     display: inline-block;
   }
   
   .inner-container {
-    width: 55%;
+    position: relative;
+    width: 70%;
     float: right;
-    background-color: #fdfdfd;
+    background-color: #121212;
     padding: 150px;
+    color: white;
   }
   
   .inner-container h1 {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 900;
   }
   
   .text {
-    font-size: 13px;
-    color: #545454;
+    font-size: 16px;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
@@ -47,6 +51,7 @@
     flex-wrap: wrap;
     padding: 2em 1em;
     text-align: center;
+    background-color: #121212;
   }
   
   .column {
@@ -58,23 +63,23 @@
     width: 100%;
     text-align: center;
     font-size: 3.5em;
-    color: #286e8a;
+    color: white;
   }
   
   .card {
     box-shadow: 0 0 2.2em rgba(25, 0, 58, 0.1);
     border-radius: 0.6em;
-    color: #1f003b;
+    color: #0ac14d;
     cursor: pointer;
     transition: 0.3s;
-    background-color: #ffffff;
+    background-color: black;
     width: 100%;
   }
   
   .card .img-container {
     width: 8em;
     height: 8em;
-    background-color: #a993ff;
+    background-color: #0ac14d;
     padding: 0.5em;
     border-radius: 50%;
     margin: 0 auto 2em auto;
@@ -87,6 +92,7 @@
   
   .card h3 {
     font-weight: 500;
+    
   }
   
   card p {
@@ -94,6 +100,7 @@
     text-transform: uppercase;
     margin: 0.5em 0 2em 0;
     letter-spacing: 2px;
+    
   }
   
   .icons {
@@ -111,7 +118,7 @@
   }
   
   .card:hover {
-    background: linear-gradient(#6045ea, #8567f7);
+    background: linear-gradient(#1ed760, #001006);
     color: #ffffff;
   }
   

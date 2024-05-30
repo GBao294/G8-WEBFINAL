@@ -25,7 +25,7 @@ const SignIn = () => {
             const newAction = {
              time: formattedTime,
              action: `Tài khoản "${email}" đăng nhập`,
-             user: userId,
+             user: email,
             };
             push(LogDatabase, newAction);
 

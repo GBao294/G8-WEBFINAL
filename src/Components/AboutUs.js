@@ -23,34 +23,12 @@ function AboutUs() {
        web cung cấp nhạc vô cùng chất lượng, đó là Spotify để làm nên trang web
        này. Dưới đây là thông tin cụ thể hơn về các thành viên có trong nhóm.
 
-
-
-
-
-
-
-
-       
      </p>
-     
-
-
-
-
-
-
-
-
-
-
-
-
-     
    </div>
 
    
  </div>
-<section>
+<div className="rowContainer">
    <div className="row">
      <h1 id="ourteam"> Our Team</h1>
    </div>
@@ -98,7 +76,7 @@ function AboutUs() {
      <div className="column">
        <div className="card">
          <div className="img-container">
-         <img src="https://firebasestorage.googleapis.com/v0/b/music-9ae9f.appspot.com/o/Avatar%2FPhuc.jpg?alt=media&token=9486c4d9-5121-43eb-9024-40f2b5eb3e74" />
+         <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-1/438253527_1130582398129756_453196716170683339_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=W6T3y7N3LuQQ7kNvgHdQEdX&_nc_ht=scontent.fsgn2-9.fna&oh=00_AYBJH54LjTlZQ6DNW6Eo3FIRA-iQesBKww30b2T1-3InaA&oe=665EB087" />
 
 
          </div>
@@ -120,8 +98,7 @@ function AboutUs() {
      <div className="column">
        <div className="card">
          <div className="img-container">
-         <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.6435-1/67417162_926040867746540_8252247100499165184_n.jpg?stp=c0.5000x0.5000f_dst-webp_e15_p425x425_q70_tt1_u&efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV91cmwifQ&_nc_cid=0&_nc_ad=z-m&_nc_rml=0&_nc_ht=scontent.fsgn2-5.fna&_nc_cat=104&_nc_ohc=707EzUKNejIAX83MxnT&ccb=1-7&_nc_sid=db1b99&oh=00_AfATxOatxLs76f6_mELgIuBgJ_nc2RIyLsjoMPWnLLYz-Q&oe=658EA373" />
-
+         <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.6435-1/67417162_926040867746540_8252247100499165184_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cnHEjdd7sIgQ7kNvgFKNJzY&_nc_ht=scontent.fsgn2-5.fna&oh=00_AYDI1p85P9fMjAe8moYTZmFPclMfDh-7D-RoUjgHT6w2-g&oe=66805673" />
 
          </div>
          <h3>Lê Xuân Sơn</h3>
@@ -140,7 +117,7 @@ function AboutUs() {
        </div>
      </div>
    </div>   
- </section>
+ </div>
 </>
 );
 };
